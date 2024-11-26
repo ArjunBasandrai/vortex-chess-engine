@@ -30,7 +30,8 @@
 *.exe
 *.out
 *.app
-elixir.exe
+elixir*
+
 # Debug files
 *.pdb
 *.ilk
