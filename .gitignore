@@ -41,3 +41,7 @@ elixir*
 *.epd
 
 **/results/**
+
+.venv
+.idea
+pyvenv.cfg
