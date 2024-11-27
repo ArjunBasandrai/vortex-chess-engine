@@ -32,13 +32,13 @@ tune: __tune_compile
 texel: __texel_compile __texel_run
 
 __compile:
-	$(CXX) -Ofast -march=native -DNDEBUG -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
+	$(CXX) -O3 -Os -ffast-math -march=native -DNDEBUG -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
 
 __tune_compile:
-	$(CXX) -Ofast -march=native -DNDEBUG -DUSE_TUNE -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
+	$(CXX) -O3 -ffast-math -march=native -DNDEBUG -DUSE_TUNE -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
 
 __texel_compile:
-	$(CXX) -Ofast -march=native -DNDEBUG -DTEXEL -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
+	$(CXX) -O3 -ffast-math -march=native -DNDEBUG -DTEXEL -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
 
 __debug_compile:
 	$(CXX) -Og -g -std=c++20 $(STACK) -o $(EXE_NAME) elixir.cpp $(SRC)
